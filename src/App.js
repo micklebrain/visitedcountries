@@ -9,8 +9,11 @@ function App() {
         <h1>
           Lost Minds (Travel Blog)
         </h1>
-        <h1> New York </h1>
-        <p> Indoor dining closed </p>
+        <p>Locations with indoor dining closed</p>
+        <ul>
+          <li> New York </li>        
+          <li> Puerto Rico </li>
+        </ul> 
       </header>
     </div>
   );
