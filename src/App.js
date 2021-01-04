@@ -9,10 +9,14 @@ function App() {
         <h1>
           Lost Minds (Travel Blog)
         </h1>
-        <p>Locations with indoor dining closed</p>
+        <h2>Confirmed locations with indoor dining open </h2>
+          <ul>
+            <li> New Jersey last updated - 1/3/21 </li>                    
+          </ul> 
+        <h2>Confirmed locations with indoor dining closed</h2>
         <ul>
-          <li> New York </li>        
-          <li> Puerto Rico </li>
+          <li> New York last updated - 1/3/21 </li>        
+          <li> Puerto Rico last updated - 1/3/21 </li>
         </ul> 
       </header>
     </div>
