@@ -19,7 +19,7 @@ function App() {
         <ul>
           <li> New York last updated - 4/12/21 </li>
         </ul>
-        <h3>Confirmed locations with complete indoor dining open </h3>
+        <h2>Confirmed locations with complete indoor dining open </h2>
         <ul>          
           <li> New Jersey last updated - 4/12/21 </li>
           <li> Georgia last updated - 4/12/21 </li>
