@@ -1,32 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Home from './Home';
+import Speakeasy from './Speakeasy'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">      
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <body>
-        <h1>
-          Lost Minds (Travel Blog)
-        </h1>
-        <h2>Confirmed locations with indoor dining closed</h2>
-        <ul>          
-          <li> Puerto Rico last updated - 1/3/21 </li>
-        </ul>
-        <h2>Confirmed locations with partial indoor dining open </h2>
-        <ul>
-          <li> New York last updated - 4/12/21 </li>
-        </ul>
-        <h2>Confirmed locations with complete indoor dining open </h2>
-        <ul>          
-          <li> New Jersey last updated - 4/12/21 </li>
-          <li> Georgia last updated - 4/12/21 </li>
-        </ul>
-      </body>
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Router>
+        <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/speakeasies">Speakeasies</Link>
+                </li>
+              </ul>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/speakeasies" component={Speakeasy} />          
+        </Switch>
+    </Router>
+  </div>
+);
 
 export default App;
