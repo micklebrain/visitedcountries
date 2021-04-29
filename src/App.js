@@ -19,10 +19,13 @@ const App = () => (
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/speakeasies">Speakeasies</Link>
+                  <Link to="/topnycresturants">Top NYC Resturants</Link>
                 </li>
                 <li>
-                  <Link to="/topnycresturants">Top NYC Resturants</Link>
+                  <Link to="/speakeasies">NYC Speakeasies</Link>
+                </li>                
+                <li>
+                  <Link to="/tourguide">Hire tour guide</Link>
                 </li>
               </ul>
         </nav>
