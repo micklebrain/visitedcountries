@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Home from './Home';
+import Hotels from './Hotels';
 import Speakeasy from './Speakeasy'
 import {
   BrowserRouter as Router,
@@ -23,10 +24,13 @@ const App = () => (
                 </li>
                 <li>
                   <Link to="/speakeasies">NYC Speakeasies</Link>
-                </li>                
-                <li>
-                  <Link to="/tourguide">Hire tour guide</Link>
                 </li>
+                <li>
+                  <Link to="/hotels">Hotels</Link>
+                </li>                
+                {/* <li>
+                  <Link to="/tourguide">Hire tour guide</Link>
+                </li> */}
               </ul>
         </nav>
         <Switch>
@@ -34,7 +38,8 @@ const App = () => (
             <Home />
           </Route>
           <Route exact path="/speakeasies" component={Speakeasy} />
-          <Route exact path="/topnycresturants" component={TopNYCResturants} />          
+          <Route exact path="/topnycresturants" component={TopNYCResturants} />
+          <Route exact path="/hotels" component={Hotels} />           
         </Switch>
     </Router>
   </div>
