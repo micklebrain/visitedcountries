@@ -1,27 +1,4 @@
-// Powered by documenu API
-
 import React from "react";
-
-// function TopNYCResturants() {    
-//     // var details = getResturantDetails()    
-//     // var details2 = getResturantDetails2()
-//     return (
-//         <div>             
-//             <h1> Top 5 Manhattan Resturants </h1>
-//             <ul>
-//                 <li> Obao </li>
-
-//                 {/* {details} */}
-//                 {getResturantDetails2()}
-
-//                 <li> Szechuan Mountain House </li>
-//                 <li> Sushi Ryusei </li>
-//                 <li> The Jin </li>
-//                 <li> Pig and Khao </li>
-//             </ul>         
-//          </div>
-//     )
-// }
 
 class TopNYCResturants extends React.Component {
 
@@ -48,7 +25,10 @@ class TopNYCResturants extends React.Component {
                 console.log("Data: " + data);
                 console.log("API Response: " + data['data'][0]['restaurant_name']);
                 console.log(data['data']);
-                const res = data['data'][0]['restaurant_name'];
+                const res = {
+                    name: data['data'][0]['restaurant_name'],
+                    cuisines: data['data'][0]['cuisines']
+                }
                 console.log("Res: " + res);    
                 let resturants = this.state.resturantDetails 
                 resturants.push(res);
@@ -62,7 +42,7 @@ class TopNYCResturants extends React.Component {
     }
 
     async componentDidMount() {        
-        var phone_numbers = ['2123085588', '2129838880'];
+        var phone_numbers = ['2123085588', '2129838880', '2122233488', '2129204485'];
         phone_numbers.forEach( number => {
             this.getResturantDetails2(number); 
         })               
@@ -71,12 +51,12 @@ class TopNYCResturants extends React.Component {
     render() {        
         const resturantDetails = this.state.resturantDetails
         console.log(this.state);
-        const resturantsList = resturantDetails.map((resturant) => <li>{resturant}</li>);
+        const resturantsList = resturantDetails.map((resturant) => <li>{ resturant.name + " Cusines: " + resturant.cuisines }</li>);
 
         return (<div>             
             <h1> Top 5 Manhattan Resturants </h1>
             <ul>
-                {resturantsList}
+                { resturantsList }
             </ul>
         </div>)
     }
