@@ -1,6 +1,6 @@
 import React from "react";
 
-class TopNYCResturants extends React.Component {
+class TopVegasResturants extends React.Component {
 
     constructor(props) {
         super(props);
@@ -10,23 +10,7 @@ class TopNYCResturants extends React.Component {
         }
     }
 
-    // collection.insert({hello:'world_no_safe'});
-
-    connectDB() {
-        
-        const { MongoClient } = require('mongodb');
-        const uri = "mongodb+srv://whiterose:Cabinboy23@cluster0.uimrt.mongodb.net/test?retryWrites=true&w=majority";
-        const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-        console.log("client" + client);
-        client.connect(err => {
-        const collection = client.db("test").collection("devices");
-        // perform actions on the collection object
-        client.close();
-        });
-
-    }
-
-    getResturantDetails2(number) {  
+    getResturantDetails2(number) {
         fetch("https://api.documenu.com/v2/restaurants/search/fields?restaurant_phone=" + number + "&exact=true", {
         "method": "GET",
         "headers": {
@@ -57,12 +41,10 @@ class TopNYCResturants extends React.Component {
     }
 
     async componentDidMount() {        
-        var phone_numbers = ['2123085588', '2129838880', '2122233488', '2129204485'];
+        var phone_numbers = ['7027317373', '7028894477'];
         phone_numbers.forEach( number => {
             this.getResturantDetails2(number); 
-        })          
-        
-        this.connectDB();
+        })               
     }
 
     render() {        
@@ -79,4 +61,4 @@ class TopNYCResturants extends React.Component {
     }
 }
 
-export default TopNYCResturants
+export default TopVegasResturants
