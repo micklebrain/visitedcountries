@@ -10,6 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import TopNYCResturants from './TopNYCResturants';
+import TopVegasResturants from './TopVegasResturants';
 
 const App = () => (
   <div>
@@ -23,14 +24,23 @@ const App = () => (
                   <Link to="/topnycresturants">Top NYC Resturants</Link>
                 </li>
                 <li>
+                  <Link to="/topvegasresturants">Top Las Vegas Resturants</Link>
+                </li>
+                <li>
                   <Link to="/speakeasies">NYC Speakeasies</Link>
                 </li>
                 <li>
                   <Link to="/hotels">Hotels</Link>
-                </li>                
+                </li>              
+                {/* <li>
+                  <Link to="/festivals">Festivals</Link>
+                </li>             */}
                 {/* <li>
                   <Link to="/tourguide">Hire tour guide</Link>
                 </li> */}
+                {/* bars
+                nightclubs 
+                general attractions */}
               </ul>
         </nav>
         <Switch>
@@ -39,7 +49,9 @@ const App = () => (
           </Route>
           <Route exact path="/speakeasies" component={Speakeasy} />
           <Route exact path="/topnycresturants" component={TopNYCResturants} />
+          <Route exact path="/topvegasresturants" component={TopVegasResturants} />
           <Route exact path="/hotels" component={Hotels} />           
+          {/* <Route exact path="/festivals" component={Festivals} />         */}
         </Switch>
     </Router>
   </div>
