@@ -41,7 +41,7 @@ class TopVegasResturants extends React.Component {
     }
 
     async componentDidMount() {        
-        var phone_numbers = ['7027317373', '7028894477'];
+        var phone_numbers = ['7027317373', '7028894477', '7027353033'];
         phone_numbers.forEach( number => {
             this.getResturantDetails2(number); 
         })               
