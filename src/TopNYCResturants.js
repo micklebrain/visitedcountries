@@ -10,20 +10,29 @@ class TopNYCResturants extends React.Component {
         }
     }
 
-    // collection.insert({hello:'world_no_safe'});
-
-    connectDB() {
-        
-        const { MongoClient } = require('mongodb');
-        const uri = "mongodb+srv://whiterose:Cabinboy23@cluster0.uimrt.mongodb.net/test?retryWrites=true&w=majority";
-        const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-        console.log("client" + client);
-        client.connect(err => {
-        const collection = client.db("test").collection("devices");
-        // perform actions on the collection object
-        client.close();
-        });
-
+    getResturantDetails() {
+        var requestOptions = {
+            method: 'GET',
+        };
+          
+        fetch("https://lostmindsbackend.vercel.app/resturants", requestOptions)
+        .then(response => response.text())
+        .then(response => {
+            console.log("Response: " + response);   
+            var resyJson = JSON.parse(response);        
+            
+            resyJson['doc'].forEach(resturant => {
+                var resyname = resturant['name'];                              
+                const res = {
+                    name: resyname,             
+                }
+                console.log("Res: " + res);    
+                let resturants = this.state.resturantDetails;                 
+                resturants.push(res);
+                this.setState({ resturantDetails: resturants });     
+            });               
+        })
+        .catch(error => console.log('error', error));
     }
 
     getResturantDetails2(number) {  
@@ -40,6 +49,7 @@ class TopNYCResturants extends React.Component {
             response.json().then(data => {
                 console.log("Data: " + data);                
                 console.log(data['data']);
+                // Add #1 dish 
                 const res = {
                     name: data['data'][0]['restaurant_name'],
                     cuisines: data['data'][0]['cuisines']
@@ -57,12 +67,14 @@ class TopNYCResturants extends React.Component {
     }
 
     async componentDidMount() {        
-        var phone_numbers = ['2123085588', '2129838880', '2122233488', '2129204485'];
-        phone_numbers.forEach( number => {
-            this.getResturantDetails2(number); 
-        })          
+        // Obao - Manhattan, Piquant - Brooklyn, White Bear - Queens, Seis Vecinos - Bronx, Lacey's Bridge Tavern - Staten Island        
+        // var phone_numbers = ['2123085588', '7184844114', '7189612322', '7186848604', '7182737514'];
+        // phone_numbers.forEach( number => {
+        //     this.getResturantDetails2(number); 
+        // })          
+
+        this.getResturantDetails();
         
-        this.connectDB();
     }
 
     render() {        
@@ -72,9 +84,9 @@ class TopNYCResturants extends React.Component {
 
         return (<div>             
             <h1> Top 5 Manhattan Resturants </h1>
-            <ul>
+            <ol>
                 { resturantsList }
-            </ul>
+            </ol>
         </div>)
     }
 }
