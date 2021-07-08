@@ -45,19 +45,18 @@ class TopNYCResturants extends React.Component {
     }
 
     render() {        
-        const resturantDetails = this.state.resturantDetails
-        console.log(this.state);
+        const resturantDetails = this.state.resturantDetails        
         const resturantsList = resturantDetails.map((resturant) => 
-            <div style = { {textAlign: "center"} }  >
-                <h2> { resturant.region } </h2>             
-                <h1> { resturant.name } </h1>             
+            <div style = { {textAlign: "center"} }  >        
+                <h2> { resturant.name } </h2>        
+                {/* <div> { resturant.region } </div>           */}
                 <div> { resturant.address } </div>             
-                <div> { resturant.topDish } </div>
+                {/* <div> Recommended dish : { resturant.topDish } </div> */}
             </div>
         );
 
         return (<div>             
-            <h1> Top 5 Manhattan Resturants </h1>
+            <h1> Top resturant in each New York borough </h1>
                  
             { resturantsList }
      
