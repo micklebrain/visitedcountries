@@ -24,15 +24,15 @@ const App = () => (
                 <li>
                   <Link to="/topnycresturants">Top NYC Resturants</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/topvegasresturants">Top Las Vegas Resturants</Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to="/speakeasies">NYC Speakeasies</Link>
                 </li>
                 <li>
                   <Link to="/hotels">Hotels</Link>
-                </li>    
+                </li>     */}
                 <li>
                   <Link to="/ticketMarketplace">Ticket Marketplace</Link>
                 </li>                        
