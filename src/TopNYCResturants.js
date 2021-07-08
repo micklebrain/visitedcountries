@@ -56,7 +56,7 @@ class TopNYCResturants extends React.Component {
         );
 
         return (<div>             
-            <h1> Top resturant in each New York borough </h1>
+            <h1> July, 2020 top resturants in each New York borough </h1>
                  
             { resturantsList }
      

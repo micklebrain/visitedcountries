@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import TopNYCResturants from './TopNYCResturants';
 import TopVegasResturants from './TopVegasResturants';
+import TicketMarketplace from './TicketMarketplace';
 
 const App = () => (
   <div>
@@ -31,7 +32,10 @@ const App = () => (
                 </li>
                 <li>
                   <Link to="/hotels">Hotels</Link>
-                </li>              
+                </li>    
+                <li>
+                  <Link to="/ticketMarketplace">Ticket Marketplace</Link>
+                </li>                        
                 {/* <li>
                   <Link to="/festivals">Festivals</Link>
                 </li>             */}
@@ -50,7 +54,8 @@ const App = () => (
           <Route exact path="/speakeasies" component={Speakeasy} />
           <Route exact path="/topnycresturants" component={TopNYCResturants} />
           <Route exact path="/topvegasresturants" component={TopVegasResturants} />
-          <Route exact path="/hotels" component={Hotels} />           
+          <Route exact path="/hotels" component={Hotels} />   
+          <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
           {/* <Route exact path="/festivals" component={Festivals} />         */}
         </Switch>
     </Router>
