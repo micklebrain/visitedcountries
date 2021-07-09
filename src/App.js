@@ -16,7 +16,7 @@ import TicketMarketplace from './TicketMarketplace';
 const App = () => (
   <div>
     <Router>
-        <nav>
+        <nav id='navbar'>
               <ul>
                 <li>
                   <Link to="/">Home</Link>

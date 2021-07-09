@@ -45,3 +45,9 @@ ul {
   text-align: center;
   list-style-type: none;
 }
+
+#navbar li {
+  display: inline;
+  padding: 8px;
+  background-color: #dddddd;
+}
