@@ -6,7 +6,8 @@ class TopNYCResturants extends React.Component {
         super(props);
 
         this.state = {
-            resturantDetails: []
+            resturantDetails: [],
+            map: null
         }
     }
 
@@ -41,10 +42,54 @@ class TopNYCResturants extends React.Component {
     async componentDidMount() {        
 
         this.getResturantDetails();
+
+        this.initMap();
         
     }
 
-    render() {        
+    initMap() {        
+        const newyork_coordinates = { lat: 40.730610, lng: -73.935242 };
+        const obao_coordinates = { lat: 40.760791677448, lng: -73.99108110247444 };
+        const kimoto_coordinates = { lat: 40.691767094535386, lng: -73.98417049147238 };
+        const kyuramen_coordinates = { lat: 40.76068852504462, lng: -73.83318746086162 };
+        const zero_otto_nove_coordinates = { lat: 40.865034316201864, lng: -73.88190799012268 };
+        const nino_coordinates = { lat: 40.601918794866485, lng: -74.07553232400136 };
+
+        var map = new window.google.maps.Map(document.getElementById("map"), {
+            center: newyork_coordinates,
+            zoom: 10,
+        });
+
+          // The marker, positioned at Uluru
+        const obao_marker = new window.google.maps.Marker({
+            position: obao_coordinates,
+            map: map,
+        });
+
+        const kimoto_marker = new window.google.maps.Marker({
+            position: kimoto_coordinates,
+            map: map,
+        });
+
+        const kyuramen_marker = new window.google.maps.Marker({
+            position: kyuramen_coordinates,
+            map: map,
+        });
+
+        const zero_otto_nove_marker = new window.google.maps.Marker({
+            position: zero_otto_nove_coordinates,
+            map: map,
+        });
+
+        const nino_marker = new window.google.maps.Marker({
+            position: nino_coordinates,
+            map: map,
+        });
+
+
+    }
+
+    render() {            
         const resturantDetails = this.state.resturantDetails        
         const resturantsList = resturantDetails.map((resturant) => 
             <div style = { {textAlign: "center"} }  >        
@@ -55,10 +100,14 @@ class TopNYCResturants extends React.Component {
             </div>
         );
 
+        
+
         return (<div>             
             <h1> July, 2020 top resturants in each New York borough </h1>
                  
             { resturantsList }
+
+            <div id="map"></div>
      
         </div>)
     }
