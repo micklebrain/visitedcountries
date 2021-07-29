@@ -1,6 +1,6 @@
 import React from "react";
 
-class TopNYCResturants extends React.Component {
+class Denver extends React.Component {
 
     constructor(props) {
         super(props);
@@ -53,7 +53,7 @@ class TopNYCResturants extends React.Component {
         const kimoto_coordinates = { lat: 40.691767094535386, lng: -73.98417049147238 };
         const kyuramen_coordinates = { lat: 40.76068852504462, lng: -73.83318746086162 };
         const zero_otto_nove_coordinates = { lat: 40.865034316201864, lng: -73.88190799012268 };
-        const bayou_coordinates = { lat: 40.61737143255008, lng: -74.06793410504413 };
+        const nino_coordinates = { lat: 40.601918794866485, lng: -74.07553232400136 };
 
         var map = new window.google.maps.Map(document.getElementById("map"), {
             center: newyork_coordinates,
@@ -81,8 +81,8 @@ class TopNYCResturants extends React.Component {
             map: map,
         });
 
-        const bayou_marker = new window.google.maps.Marker({
-            position: bayou_coordinates,
+        const nino_marker = new window.google.maps.Marker({
+            position: nino_coordinates,
             map: map,
         });
 
@@ -103,7 +103,7 @@ class TopNYCResturants extends React.Component {
         
 
         return (<div>             
-            <h1> July, 2020 top resturants in each New York borough </h1>
+            <h1> July, 2020 top resturants in Denver </h1>
                  
             { resturantsList }
 
@@ -113,4 +113,4 @@ class TopNYCResturants extends React.Component {
     }
 }
 
-export default TopNYCResturants
+export default Denver

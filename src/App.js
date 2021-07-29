@@ -7,59 +7,89 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
 } from "react-router-dom";
 import TopNYCResturants from './TopNYCResturants';
+import Denver from './Denver';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
+import PropTypes from "prop-types";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
-const App = () => (
-  <div>
-    <Router>
-        <nav id='navbar'>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/topnycresturants">Top NYC Resturants</Link>
-                </li>
-                {/* <li>
-                  <Link to="/topvegasresturants">Top Las Vegas Resturants</Link>
-                </li> */}
-                {/* <li>
-                  <Link to="/speakeasies">NYC Speakeasies</Link>
-                </li>
-                <li>
-                  <Link to="/hotels">Hotels</Link>
-                </li>     */}
-                <li>
-                  <Link to="/ticketMarketplace">Ticket Marketplace</Link>
-                </li>                        
-                {/* <li>
-                  <Link to="/festivals">Festivals</Link>
-                </li>             */}
-                {/* <li>
-                  <Link to="/tourguide">Hire tour guide</Link>
-                </li> */}
-                {/* bars
-                nightclubs 
-                general attractions */}
-              </ul>
-        </nav>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/speakeasies" component={Speakeasy} />
-          <Route exact path="/topnycresturants" component={TopNYCResturants} />
-          <Route exact path="/topvegasresturants" component={TopVegasResturants} />
-          <Route exact path="/hotels" component={Hotels} />   
-          <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
-          {/* <Route exact path="/festivals" component={Festivals} />         */}
-        </Switch>
-    </Router>
-  </div>
-);
+class App extends React.Component {
+  
+  // ListItemLink(props) {
+  //   return <ListItem button component="a" {...props} />;
+  // }
+  
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {   
+    return (
+    <div>
+      <Router>
+          <nav id='navbar'>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              {/* <li>
+                <Link to="/topvegasresturants">Top Las Vegas Resturants</Link>
+              </li> */}
+              <li>
+                <Link to="/ticketMarketplace">Ticket Marketplace</Link>
+              </li>                      
+              {/* 
+              bars
+              nightclubs 
+              general attractions 
+              tour guide
+              festivals
+              hotels
+              speakeasies
+              */}
+            </ul>
+          </nav>
+          <div style = { {
+            width: '100%',
+            maxWidth: 360,
+            } }>
+            <List component="nav" aria-label="secondary mailbox folders" >
+              Cities
+              <ListItem button>
+                <Link to="/topnycresturants">New York</Link>       
+              </ListItem>
+              <ListItem button>
+                <Link to="/denver">Denver</Link>       
+              </ListItem>
+              {/* <ListItemLink href="#simple-list">
+                <ListItemText primary="Spam" />
+              </ListItemLink> */}
+            </List>
+          </div>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/speakeasies" component={Speakeasy} />
+            <Route exact path="/topnycresturants" component={TopNYCResturants} />
+            <Route exact path="/denver" component={Denver} />
+            <Route exact path="/topvegasresturants" component={TopVegasResturants} />
+            <Route exact path="/hotels" component={Hotels} />   
+            <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
+          </Switch>          
+      </Router>      
+    </div>)
+  }
+}
 
 export default App;
