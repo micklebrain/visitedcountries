@@ -17,6 +17,7 @@ class Denver extends React.Component {
         };
           
         fetch("https://lostmindsbackend.vercel.app/resturants", requestOptions)
+        // fetch("http://localhost:3000/resturants", requestOptions)
         .then(response => response.text())
         .then(response => {
             console.log("Response: " + response);   
