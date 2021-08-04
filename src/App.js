@@ -9,8 +9,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import NewYork from './cities/NewYork';
 import Denver from './cities/Denver';
+import NewYork from './cities/NewYork';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
 import PropTypes from "prop-types";
@@ -63,10 +63,10 @@ class App extends React.Component {
             <List component="nav" aria-label="secondary mailbox folders" >
               Cities
               <ListItem button>
-                <Link to="/newyork">New York</Link>       
+                <Link to="/newyork">New York City</Link>       
               </ListItem>
               <ListItem button>
-                <Link to="/denver">Denver</Link>       
+                <Link to="/denver">Colorado</Link>       
               </ListItem>
               {/* <ListItemLink href="#simple-list">
                 <ListItemText primary="Spam" />
