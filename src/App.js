@@ -9,8 +9,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import NewYork from './NewYork';
-import Denver from './Denver';
+import NewYork from './cities/NewYork';
+import Denver from './cities/Denver';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
 import PropTypes from "prop-types";
@@ -42,9 +42,6 @@ class App extends React.Component {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              {/* <li>
-                <Link to="/topvegasresturants">Top Las Vegas Resturants</Link>
-              </li> */}
               <li>
                 <Link to="/ticketMarketplace">Ticket Marketplace</Link>
               </li>                      
@@ -81,8 +78,8 @@ class App extends React.Component {
               <Home />
             </Route>
             <Route exact path="/speakeasies" component={Speakeasy} />
-            <Route exact path="/newyork" component={NewYork} />
             <Route exact path="/denver" component={Denver} />
+            <Route exact path="/newyork" component={NewYork} />                        
             <Route exact path="/topvegasresturants" component={TopVegasResturants} />
             <Route exact path="/hotels" component={Hotels} />   
             <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
