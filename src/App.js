@@ -63,11 +63,11 @@ class App extends React.Component {
             <List component="nav" aria-label="secondary mailbox folders" >
               Cities
               <ListItem button>
-                <Link to="/newyork">New York City</Link>       
+                <Link to="/denver">Denver</Link>      
               </ListItem>
               <ListItem button>
-                <Link to="/denver">Colorado</Link>       
-              </ListItem>
+                <Link to="/newyork">New York City</Link>       
+              </ListItem>              
               {/* <ListItemLink href="#simple-list">
                 <ListItemText primary="Spam" />
               </ListItemLink> */}
