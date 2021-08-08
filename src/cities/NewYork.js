@@ -104,7 +104,7 @@ class NewYork extends React.Component {
         
 
         return (<div>             
-            <h1> July, 2020 top resturants in each New York borough </h1>
+            <h1> August, 2021 top resturants in each New York borough </h1>
                  
             { resturantsList }
 
