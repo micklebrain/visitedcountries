@@ -1,6 +1,6 @@
 import React from "react";
 
-class NewYork extends React.Component {
+class NewYorkCity extends React.Component {
 
     constructor(props) {
         super(props);
@@ -95,7 +95,7 @@ class NewYork extends React.Component {
         const resturantsList = resturantDetails.map((resturant) => 
             <div style = { {textAlign: "center"} }  >        
                 <h2> { resturant.name } </h2>        
-                {/* <div> { resturant.region } </div>           */}
+                {/* <div> { resturant.region } </div> */}
                 <div> { resturant.address } </div>             
                 {/* <div> Recommended dish : { resturant.topDish } </div> */}
             </div>
@@ -114,4 +114,4 @@ class NewYork extends React.Component {
     }
 }
 
-export default NewYork
+export default NewYorkCity

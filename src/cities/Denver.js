@@ -16,7 +16,7 @@ class Denver extends React.Component {
             method: 'GET',
         };
           
-        fetch("https://lostmindsbackend.vercel.app/resturants/colorado", requestOptions)
+        fetch("https://lostmindsbackend.vercel.app/resturants/denver", requestOptions)
         // fetch("http://localhost:3000/resturants/colorado", requestOptions)
         .then(response => response.text())
         .then(response => {
@@ -95,7 +95,7 @@ class Denver extends React.Component {
         const resturantsList = resturantDetails.map((resturant) => 
             <div style = { {textAlign: "center"} }  >        
                 <h2> { resturant.name } </h2>        
-                {/* <div> { resturant.region } </div>           */}
+                {/* <div> { resturant.region } </div> */}
                 <div> { resturant.address } </div>             
                 {/* <div> Recommended dish : { resturant.topDish } </div> */}
             </div>

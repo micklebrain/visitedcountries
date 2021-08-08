@@ -10,7 +10,7 @@ import {
   Link,
 } from "react-router-dom";
 import Denver from './cities/Denver';
-import NewYork from './cities/NewYork';
+import NewYorkCity from './cities/NewYorkCity';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
 import PropTypes from "prop-types";
@@ -66,7 +66,7 @@ class App extends React.Component {
                 <Link to="/denver">Denver</Link>      
               </ListItem>
               <ListItem button>
-                <Link to="/newyork">New York City</Link>       
+                <Link to="/newyorkcity">New York City</Link>       
               </ListItem>              
               {/* <ListItemLink href="#simple-list">
                 <ListItemText primary="Spam" />
@@ -79,7 +79,7 @@ class App extends React.Component {
             </Route>
             <Route exact path="/speakeasies" component={Speakeasy} />
             <Route exact path="/denver" component={Denver} />
-            <Route exact path="/newyork" component={NewYork} />                        
+            <Route exact path="/newyorkcity" component={NewYorkCity} />                        
             <Route exact path="/topvegasresturants" component={TopVegasResturants} />
             <Route exact path="/hotels" component={Hotels} />   
             <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
