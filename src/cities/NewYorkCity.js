@@ -19,8 +19,7 @@ class NewYorkCity extends React.Component {
         fetch("https://lostmindsbackend.vercel.app/resturants/newyorkcity", requestOptions)
         // fetch("http://localhost:3000/resturants/newyorkcity", requestOptions)
         .then(response => response.text())
-        .then(response => {
-            console.log("Response: " + response);   
+        .then(response => {            
             var resyJson = JSON.parse(response);        
             
             resyJson['doc'].forEach(resturant => {                
@@ -30,8 +29,7 @@ class NewYorkCity extends React.Component {
                     address: resturant['address'],
                     topDish: resturant['topDish']
 
-                }
-                console.log("Res: " + res);    
+                }                    
                 let resturants = this.state.resturantDetails;                 
                 resturants.push(res);
                 this.setState({ resturantDetails: resturants });     
@@ -94,9 +92,9 @@ class NewYorkCity extends React.Component {
         const resturantDetails = this.state.resturantDetails        
         const resturantsList = resturantDetails.map((resturant) => 
             <div style = { {textAlign: "center"} }  >        
-                <h2> { resturant.name } </h2>        
-                {/* <div> { resturant.region } </div> */}
+                <h2> { resturant.name } </h2>                    
                 <div> { resturant.address } </div>             
+                {/* <div> { resturant.region } </div> */}
                 {/* <div> Recommended dish : { resturant.topDish } </div> */}
             </div>
         );

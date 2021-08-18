@@ -21,13 +21,7 @@ class App extends React.Component {
   
   // ListItemLink(props) {
   //   return <ListItem button component="a" {...props} />;
-  // }
-  
-  static propTypes = {
-    match: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
-  };
+  // } 
 
   constructor(props) {
     super(props);
