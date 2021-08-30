@@ -6,7 +6,6 @@ function Home() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <body>
           <h1>
             Lost Minds (Travel Blog)
           </h1>
@@ -26,7 +25,6 @@ function Home() {
           <ul>          
             <li> Puerto Rico last updated - 1/3/21 </li>
           </ul>
-        </body>
       </div>
     );
   }
