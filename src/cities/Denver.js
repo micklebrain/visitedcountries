@@ -40,9 +40,17 @@ class Denver extends React.Component {
 
     async componentDidMount() {        
 
+        const googleScript = document.getElementById('google-map-script')
+
         this.getResturantDetails();
 
-        this.initMap();
+        if (window.google) {
+            this.initMap();        
+        }
+
+        googleScript.addEventListener('load', () => {
+            this.initMap();   
+        })
         
     }
 

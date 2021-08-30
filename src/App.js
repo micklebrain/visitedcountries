@@ -13,7 +13,6 @@ import Denver from './cities/Denver';
 import NewYorkCity from './cities/NewYorkCity';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
-import PropTypes from "prop-types";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
@@ -22,10 +21,6 @@ class App extends React.Component {
   // ListItemLink(props) {
   //   return <ListItem button component="a" {...props} />;
   // } 
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {   
     return (

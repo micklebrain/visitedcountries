@@ -38,11 +38,19 @@ class NewYorkCity extends React.Component {
         .catch(error => console.log('error', error));
     }
 
-    async componentDidMount() {        
+    async componentDidMount() {      
+        
+        const googleScript = document.getElementById('google-map-script')
 
         this.getResturantDetails();
 
-        this.initMap();
+        if (window.google) {
+            this.initMap();        
+        }
+
+        googleScript.addEventListener('load', () => {
+            this.initMap();   
+        })
         
     }
 
@@ -54,7 +62,7 @@ class NewYorkCity extends React.Component {
         const zero_otto_nove_coordinates = { lat: 40.865034316201864, lng: -73.88190799012268 };
         const bayou_coordinates = { lat: 40.61737143255008, lng: -74.06793410504413 };
 
-        var map = new window.google.maps.Map(document.getElementById("map"), {
+        let map = new window.google.maps.Map(document.getElementById("map"), {
             center: newyork_coordinates,
             zoom: 10,
         });
