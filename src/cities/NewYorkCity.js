@@ -107,10 +107,30 @@ class NewYorkCity extends React.Component {
             </div>
         );
 
-        
+        return (<div>       
 
-        return (<div>             
-            <h1> August, 2021 top resturants in each New York borough </h1>
+            {/* <h1> Top Resturant lists </h1>
+            <ul>
+                <li> Top resturants in each New York borough </li>
+                <li> Top resturants in each Manhattan neighborhood </li>            
+            </ul>
+
+            <h2>  Top attractions </h2>
+
+            <ul>
+                <li> https://www.hudsonyardsnewyork.com/discover/vessel </li>                
+                <li> https://www.esbnyc.com/ </li>
+            </ul>
+
+            <h2> Top resturants by each New York train stop </h2>
+
+            <h2> A Line </h2> 
+            <ul> 
+                <li> Inwood 207 Street </li>
+            </ul> */}
+
+
+            <h1> September, 2021 top resturant in each New York borough </h1>
                  
             { resturantsList }
 

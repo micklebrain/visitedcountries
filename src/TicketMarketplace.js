@@ -5,10 +5,6 @@ function TicketMarketplace() {
             <div>
                 <p style = { {textAlign: "center"} }> Venmo nathan-nguyen-11 with comment of ticket name and quantity </p>
                 <ul>
-                <li>                    
-                    5x Jai Wolf - August 28
-                    Price: $100 each
-                </li>
                 <li>
                     2x Porter Robinson - October 21
                     Price: $100 each
