@@ -65,6 +65,7 @@ class NewYorkCity extends React.Component {
         let map = new window.google.maps.Map(document.getElementById("map"), {
             center: newyork_coordinates,
             zoom: 10,
+            disableDefaultUI: true,
         });
 
           // The marker, positioned at Uluru
@@ -132,6 +133,8 @@ class NewYorkCity extends React.Component {
 
             <h1> September, 2021 top resturant in each New York borough </h1>
                  
+            <h2> Uber eats promo code: eats-sxnvv </h2>
+
             { resturantsList }
 
             <div id="map"></div>

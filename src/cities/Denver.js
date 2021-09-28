@@ -65,6 +65,7 @@ class Denver extends React.Component {
         var map = new window.google.maps.Map(document.getElementById("map"), {
             center: newyork_coordinates,
             zoom: 10,
+            disableDefaultUI: true,
         });
 
           // The marker, positioned at Uluru
@@ -111,6 +112,8 @@ class Denver extends React.Component {
 
         return (<div>             
             <h1> September, 2021 top resturants in Denver </h1>
+
+            <h2> Uber eats promo code: eats-sxnvv </h2>
                  
             { resturantsList }
 
