@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import NewYorkCityArticle from './NewYorkCityArticle';
 import Denver from './cities/Denver';
 import NewYorkCity from './cities/NewYorkCity';
 import TopVegasResturants from './TopVegasResturants';
@@ -75,7 +76,9 @@ class App extends React.Component {
             <Route exact path="/hotels" component={Hotels} />   
             <Route exact path="/ticketMarketplace" component={TicketMarketplace} />
 
+            
             <Route exact path="/article" component={Article} />
+            <Route exact path="/NYCarticle" component={NewYorkCityArticle} />
           </Switch>          
       </Router>      
     </div>)
