@@ -111,8 +111,7 @@ class NewYorkCity extends React.Component {
         return (<div>       
 
             {/* <h1> Top Resturant lists </h1>
-            <ul>
-                <li> Top resturants in each New York borough </li>
+            <ul>                
                 <li> Top resturants in each Manhattan neighborhood </li>            
             </ul>
 
@@ -130,15 +129,69 @@ class NewYorkCity extends React.Component {
                 <li> Inwood 207 Street </li>
             </ul> */}
 
-
-            <h1> September, 2021 top resturant in each New York borough </h1>
-                 
             <h2> Uber eats promo code: eats-sxnvv </h2>
             <h2> Grubhub invite link: https://www.grubhub.com/referral/3c840580-6470-11e8-b9ea-43abd66f1334?utm_source=grubhub.com&utm_medium=content_owned&utm_campaign=growth_refer-a-friend_share-link&utm_content=promo_</h2>
 
+            <h1> September, 2021 top resturant in each New York borough </h1>
+                            
             { resturantsList }
 
             <div id="map"></div>
+
+            <div>     
+                <h1> Best food in every NYC neighborhood </h1>       
+                <h2> Battery Park City - Dig </h2>
+                <h2> Civic Center - Potbelly Sandwich Shop </h2>
+                <h2> Financial District - </h2>
+                <h2> Koreatown - </h2>
+                <h2> SOHO - Fanelli’s Cafe </h2>
+                <h2> Tribeca - </h2>
+            </div>
+
+            <div>     
+                <h1> Best food by every subway stop </h1>     
+                <h2> A Line </h2>  
+                <h2> Inwood 207 St - </h2>
+                <h2> Dyckman St - Potbelly Sandwich Shop </h2>
+                <h2> 190 St - </h2>
+                <h2> 181 St - </h2>
+                <h2> 175 St - Fanelli’s Cafe </h2>
+                <h2> 168 St - </h2>
+                <h2> 145 St - </h2>
+                <h2> 168 St - </h2>
+                <h2> 125 St - </h2>
+                <h2> 59 St Columbus Circle - </h2>
+                <h2> 42 St/Port Authority Bus Terminal - </h2>
+                <h2> 34 St Penn Station - </h2>
+                <h2> 14 St </h2>
+                <h2> W 4 St Wash Sq - </h2>
+                <h2> Canal St - </h2>
+                <h2> Chambers St - </h2>
+                <h2> Fulton St - </h2>
+                <h2> High St - </h2>
+                <h2> Jay St- MetroTech - </h2>
+                <h2> Hoyt Schermerhorn - </h2>
+                <h2> Nostrand Av - </h2>
+                <h2> Hoyt Schermerhorn - </h2>
+                <h2> Nostrand Av - </h2>
+                <h2> Utica Av - </h2>
+                <h2> Broadway Junction - </h2>
+                <h2> Euclid Av - </h2>
+                <h2> Grant Av - </h2>                
+                <h2> 80 St - </h2>
+                <h2> 88 St - </h2>
+                <h2> Rockaway Blvd - </h2>
+            </div>
+
+            <div>
+                <h2> Where to eat? </h2>
+                <h2> Which borough are you in </h2>
+                <button> Brooklyn </button>
+                <button> Bronx </button>
+                <button> Manhattan </button>            
+                <button> Queens </button>
+                <button> Staten Island </button>                
+            </div>
      
         </div>)
     }

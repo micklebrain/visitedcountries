@@ -16,6 +16,8 @@ import TicketMarketplace from './TicketMarketplace';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
+import Article from './Article'
+
 class App extends React.Component {
   
   // ListItemLink(props) {
@@ -71,7 +73,9 @@ class App extends React.Component {
             <Route exact path="/newyorkcity" component={NewYorkCity} />                        
             <Route exact path="/topvegasresturants" component={TopVegasResturants} />
             <Route exact path="/hotels" component={Hotels} />   
-            <Route exact path="/ticketMarketplace" component={TicketMarketplace} />         
+            <Route exact path="/ticketMarketplace" component={TicketMarketplace} />
+
+            <Route exact path="/article" component={Article} />
           </Switch>          
       </Router>      
     </div>)
