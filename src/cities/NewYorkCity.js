@@ -1,5 +1,9 @@
 import React from "react";
 
+import {    
+    Link,
+  } from "react-router-dom";
+
 class NewYorkCity extends React.Component {
 
     constructor(props) {
@@ -138,15 +142,9 @@ class NewYorkCity extends React.Component {
 
             <div id="map"></div>
 
-            <div>     
-                <h1> Best food in every NYC neighborhood </h1>       
-                <h2> Battery Park City - Dig </h2>
-                <h2> Civic Center - Potbelly Sandwich Shop </h2>
-                <h2> Financial District - </h2>
-                <h2> Koreatown - </h2>
-                <h2> SOHO - Fanelli’s Cafe </h2>
-                <h2> Tribeca - </h2>
-            </div>
+            <Link to="/NYCarticle">Article 1</Link>    
+            <Link to="/NYCarticle2">Article 2</Link>    
+            <Link to="/NYCarticle3">Article 3</Link>    
         </div>)
     }
 }

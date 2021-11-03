@@ -9,14 +9,15 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import NewYorkCityArticle from './NewYorkCityArticle';
 import Denver from './cities/Denver';
 import NewYorkCity from './cities/NewYorkCity';
 import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
+import NewYorkCityArticle from './NewYorkCityArticle';
+import NewYorkCityArticle2 from './NewYorkCityArticle2';
+import NewYorkCityArticle3 from './NewYorkCityArticle3';
 import Article from './Article'
 
 class App extends React.Component {
@@ -75,10 +76,11 @@ class App extends React.Component {
             <Route exact path="/topvegasresturants" component={TopVegasResturants} />
             <Route exact path="/hotels" component={Hotels} />   
             <Route exact path="/ticketMarketplace" component={TicketMarketplace} />
-
             
             <Route exact path="/article" component={Article} />
             <Route exact path="/NYCarticle" component={NewYorkCityArticle} />
+            <Route exact path="/NYCarticle2" component={NewYorkCityArticle2} />
+            <Route exact path="/NYCarticle3" component={NewYorkCityArticle3} />
           </Switch>          
       </Router>      
     </div>)
