@@ -50,17 +50,7 @@ class NewYorkCityArticle extends React.Component {
                 <h2> 80 St - </h2>
                 <h2> 88 St - </h2>
                 <h2> Rockaway Blvd - </h2>
-            </div>
-
-            <div>
-                <h2> Where to eat? </h2>
-                <h2> Which borough are you in </h2>
-                <button> Brooklyn </button>
-                <button> Bronx </button>
-                <button> Manhattan </button>            
-                <button> Queens </button>
-                <button> Staten Island </button>                
-            </div>     
+            </div>  
         </div>)
     }
 }

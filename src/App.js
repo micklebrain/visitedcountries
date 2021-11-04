@@ -59,8 +59,11 @@ class App extends React.Component {
                 <Link to="/denver">Denver</Link>      
               </ListItem>
               <ListItem button>
+                <Link to="/lasvegas">Las Vegas</Link>       
+              </ListItem>
+              <ListItem button>
                 <Link to="/newyorkcity">New York City</Link>       
-              </ListItem>              
+              </ListItem>         
               {/* <ListItemLink href="#simple-list">
                 <ListItemText primary="Spam" />
               </ListItemLink> */}

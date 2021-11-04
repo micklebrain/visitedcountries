@@ -114,24 +114,17 @@ class NewYorkCity extends React.Component {
 
         return (<div>       
 
-            {/* <h1> Top Resturant lists </h1>
-            <ul>                
-                <li> Top resturants in each Manhattan neighborhood </li>            
-            </ul>
+            <Link to="/NYCarticle">Article 1</Link>    
+            <Link to="/NYCarticle2">Article 2</Link>    
+            <Link to="/NYCarticle3">Article 3</Link>    
 
+            {/* <h1> Top Resturant lists </h1>
             <h2>  Top attractions </h2>
 
             <ul>
                 <li> https://www.hudsonyardsnewyork.com/discover/vessel </li>                
                 <li> https://www.esbnyc.com/ </li>
-            </ul>
-
-            <h2> Top resturants by each New York train stop </h2>
-
-            <h2> A Line </h2> 
-            <ul> 
-                <li> Inwood 207 Street </li>
-            </ul> */}
+            </ul>*/}
 
             <h2> Uber eats promo code: eats-sxnvv </h2>
             <h2> Grubhub invite link: https://www.grubhub.com/referral/3c840580-6470-11e8-b9ea-43abd66f1334?utm_source=grubhub.com&utm_medium=content_owned&utm_campaign=growth_refer-a-friend_share-link&utm_content=promo_</h2>
@@ -141,10 +134,6 @@ class NewYorkCity extends React.Component {
             { resturantsList }
 
             <div id="map"></div>
-
-            <Link to="/NYCarticle">Article 1</Link>    
-            <Link to="/NYCarticle2">Article 2</Link>    
-            <Link to="/NYCarticle3">Article 3</Link>    
         </div>)
     }
 }
