@@ -20,12 +20,19 @@ class NewYorkCityArticle3 extends React.Component {
         <div>       
             <div>
                 <h2> Where to eat? </h2>
-                <h2> Which borough are you in </h2>
-                <button> Brooklyn </button>
-                <button> Bronx </button>
-                <button> Manhattan </button>            
-                <button> Queens </button>
-                <button> Staten Island </button>                
+                <h2> Which borough are you in? </h2>
+                    <button> Brooklyn </button>
+                    <button> Bronx </button>
+                    <button> Manhattan </button>            
+                    <button> Queens </button>
+                    <button> Staten Island </button>
+
+                <h2> Which neighborhood are you in? </h2>
+                    <button> Brooklyn </button>
+                    <button> Bronx </button>
+                    <button> Manhattan </button>            
+                    <button> Queens </button>
+                    <button> Staten Island </button>                      
             </div>     
         </div>)
     }

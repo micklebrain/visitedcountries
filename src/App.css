@@ -60,3 +60,7 @@ ul {
   height: 400px;  
   width: 100%;  
 }
+
+table, th, td {
+  border: 1px solid black;
+}

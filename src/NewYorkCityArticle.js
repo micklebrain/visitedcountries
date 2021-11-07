@@ -15,18 +15,55 @@ class NewYorkCityArticle extends React.Component {
                 
     }
 
+    resturantsTrain() {
+    //     trainStationResturants = {
+    //         "station1" : "resturant1",
+    //         "station2" : "resturant2",
+    //         "station3" : "resturant3",
+    //         "station4" : "resturant4",
+    //     }
+    //     for (var key in trainStationResturants) {
+
+    //     }
+    //     const trainStationResturants = trainStationResturants.map((resturant) => 
+    //     <div style = { {textAlign: "center"} }  >        
+    //         <h2> { resturant.name } </h2>                    
+    //         <div> { resturant.address } </div>             
+    //         {/* <div> { resturant.region } </div> */}
+    //         {/* <div> Recommended dish : { resturant.topDish } </div> */}
+    //     </div>
+    // );
+    }
+
     render() {            
-        return (<div>       
-            <div>     
-                <h1> Best food by every subway stop </h1>     
+        return (
+            
+            <div>       
+                <h1> Best resturant by every subway stop </h1>     
                 <h2> A Line </h2>  
-                <h2> Inwood 207 St - Guadalupe </h2>
-                <h2> Dyckman St - International Food House </h2>
-                <h2> 190 St - </h2>
-                <h2> 181 St - </h2>
-                <h2> 175 St - Fanelli’s Cafe </h2>
-                <h2> 168 St - </h2>
-                <h2> 145 St - </h2>
+                <table>
+                    <tr>
+                        <td> Inwood 207 St </td>                    
+                        <td> Guadalupe </td>
+                    </tr>
+                    <tr>
+                        <td> Dyckman St </td>                    
+                        <td> International Food House </td>
+                    </tr>
+                    <tr>
+                        <td> 190 St </td>
+                        <td> No.1 Tex-Mex Express </td>
+                    </tr>
+                    <tr>
+                        <td> 181 St </td>
+                        <td> Burger Heights </td>
+                    </tr>
+                </table>                   
+                                                             
+                <h2> 175 St - Malecon </h2>            
+                <h2> 168 St - Jaya </h2>
+                <h2> 145 St - Chopped parsley </h2>
+
                 <h2> 168 St - </h2>
                 <h2> 125 St - </h2>
                 <h2> 59 St Columbus Circle - </h2>
@@ -50,7 +87,8 @@ class NewYorkCityArticle extends React.Component {
                 <h2> 80 St - </h2>
                 <h2> 88 St - </h2>
                 <h2> Rockaway Blvd - </h2>
-            </div>  
+                <h1> B line </h1>
+
         </div>)
     }
 }

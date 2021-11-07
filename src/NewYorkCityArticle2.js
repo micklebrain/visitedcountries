@@ -18,7 +18,7 @@ class NewYorkCityArticle2 extends React.Component {
     render() {            
         return (<div>       
             <div>     
-                <h1> Best food in every NYC neighborhood </h1>       
+                <h1> Best resturant in every NYC neighborhood </h1>       
                 <h2> Battery Park City - Dig </h2>
                 <h2> Civic Center - Potbelly Sandwich Shop </h2>
                 <h2> Financial District - Bao Bao </h2>
