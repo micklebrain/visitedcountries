@@ -114,9 +114,11 @@ class NewYorkCity extends React.Component {
 
         return (<div>       
 
-            <Link to="/NYCarticle">Best resturant by every subway stop</Link>    
-            <Link to="/NYCarticle2">Best resturant in every NYC neighborhood</Link>    
-            <Link to="/NYCarticle3">Article 3</Link>    
+            <ul>
+                <li> <Link to="/NYCarticle"> Best resturant by every subway stop </Link> </li>
+                <li> <Link to="/NYCarticle2"> Best resturant in every NYC neighborhood </Link> </li>
+                <li> <Link to="/NYCarticle3"> Article 3 </Link> </li>
+            </ul>
 
             {/* <h1> Top Resturant lists </h1>
             <h2>  Top attractions </h2>
