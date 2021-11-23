@@ -64,3 +64,7 @@ ul {
 table, th, td {
   border: 1px solid black;
 }
+
+.article {
+  height: 300px;
+}

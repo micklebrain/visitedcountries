@@ -1,8 +1,10 @@
 import React from "react";
 
-import {    
+import pie from '../images/pie.jpg';
+
+import {
     Link,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 class NewYorkCity extends React.Component {
 
@@ -19,46 +21,46 @@ class NewYorkCity extends React.Component {
         var requestOptions = {
             method: 'GET',
         };
-          
-        fetch("https://lostmindsbackend.vercel.app/resturants/newyorkcity", requestOptions)
-        // fetch("http://localhost:3000/resturants/newyorkcity", requestOptions)
-        .then(response => response.text())
-        .then(response => {            
-            var resyJson = JSON.parse(response);        
-            
-            resyJson['doc'].forEach(resturant => {                
-                const res = {
-                    region: resturant['region'],
-                    name: resturant['name'],  
-                    address: resturant['address'],
-                    topDish: resturant['topDish']
 
-                }                    
-                let resturants = this.state.resturantDetails;                 
-                resturants.push(res);
-                this.setState({ resturantDetails: resturants });     
-            });               
-        })
-        .catch(error => console.log('error', error));
+        fetch("https://lostmindsbackend.vercel.app/resturants/newyorkcity", requestOptions)
+            // fetch("http://localhost:3000/resturants/newyorkcity", requestOptions)
+            .then(response => response.text())
+            .then(response => {
+                var resyJson = JSON.parse(response);
+
+                resyJson['doc'].forEach(resturant => {
+                    const res = {
+                        region: resturant['region'],
+                        name: resturant['name'],
+                        address: resturant['address'],
+                        topDish: resturant['topDish']
+
+                    }
+                    let resturants = this.state.resturantDetails;
+                    resturants.push(res);
+                    this.setState({ resturantDetails: resturants });
+                });
+            })
+            .catch(error => console.log('error', error));
     }
 
-    async componentDidMount() {      
-        
+    async componentDidMount() {
+
         const googleScript = document.getElementById('google-map-script')
 
         this.getResturantDetails();
 
         if (window.google) {
-            this.initMap();        
+            this.initMap();
         }
 
         googleScript.addEventListener('load', () => {
-            this.initMap();   
+            this.initMap();
         })
-        
+
     }
 
-    initMap() {        
+    initMap() {
         const newyork_coordinates = { lat: 40.730610, lng: -73.935242 };
         const obao_coordinates = { lat: 40.760791677448, lng: -73.99108110247444 };
         const kimoto_coordinates = { lat: 40.691767094535386, lng: -73.98417049147238 };
@@ -72,7 +74,7 @@ class NewYorkCity extends React.Component {
             disableDefaultUI: true,
         });
 
-          // The marker, positioned at Uluru
+        // The marker, positioned at Uluru
         const obao_marker = new window.google.maps.Marker({
             position: obao_coordinates,
             map: map,
@@ -97,28 +99,36 @@ class NewYorkCity extends React.Component {
             position: bayou_coordinates,
             map: map,
         });
-
-
     }
 
-    render() {            
-        const resturantDetails = this.state.resturantDetails        
-        const resturantsList = resturantDetails.map((resturant) => 
-            <div style = { {textAlign: "center"} }  >        
-                <h2> { resturant.name } </h2>                    
-                <div> { resturant.address } </div>             
+    render() {
+        const resturantDetails = this.state.resturantDetails
+        const resturantsList = resturantDetails.map((resturant) =>
+            <div style={{ textAlign: "center" }}  >
+                <h2> {resturant.name} </h2>
+                <div> {resturant.address} </div>
                 {/* <div> { resturant.region } </div> */}
                 {/* <div> Recommended dish : { resturant.topDish } </div> */}
             </div>
         );
 
-        return (<div>       
+        return (<div>
 
             <ul>
-                <li> <Link to="/NYCarticle"> Best resturant by every subway stop </Link> </li>
-                <li> <Link to="/NYCarticle2"> Best resturant in every NYC neighborhood </Link> </li>
-                <li> <Link to="/NYCarticle3"> Article 3 </Link> </li>
+                <li>
+                    <img class="article" src={pie} alt="Italian Trulli" />
+                    <Link to="/NYCarticle"> Best resturant by every subway stop </Link>
+                </li>
+                <li>
+                    <img class="article" src={pie} alt="Italian Trulli" />
+                    <Link to="/NYCarticle2"> Best resturant in every NYC neighborhood </Link>
+                </li>
+                <li>
+                    <img class="article" src={pie} alt="Italian Trulli" />
+                    <Link to="/NYCarticle3"> Article 3 </Link>
+                </li>
             </ul>
+
 
             {/* <h1> Top Resturant lists </h1>
             <h2>  Top attractions </h2>
@@ -132,8 +142,8 @@ class NewYorkCity extends React.Component {
             <h2> Grubhub invite link: https://www.grubhub.com/referral/3c840580-6470-11e8-b9ea-43abd66f1334?utm_source=grubhub.com&utm_medium=content_owned&utm_campaign=growth_refer-a-friend_share-link&utm_content=promo_</h2>
 
             <h1> September, 2021 top resturant in each New York borough </h1>
-                            
-            { resturantsList }
+
+            {resturantsList}
 
             <div id="map"></div>
         </div>)

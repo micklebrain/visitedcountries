@@ -39,9 +39,11 @@ class NewYorkCityArticle extends React.Component {
         return (
             
             <div>       
-                <h1> Best resturant by every subway stop </h1>     
-                <h2> A Line </h2>  
+                <h1> Best resturant by every subway stop </h1>                     
                 <table>
+                    <tr>
+                        <td> A Line </td>                                            
+                    </tr>
                     <tr>
                         <td> Inwood 207 St </td>                    
                         <td> Guadalupe </td>
