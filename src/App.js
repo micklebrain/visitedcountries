@@ -1,8 +1,6 @@
 import './App.css';
 import React from 'react';
 import Home from './Home';
-import Hotels from './Hotels';
-import Speakeasy from './Speakeasy'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +9,6 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
-
   render() {   
     return (
     <div>
