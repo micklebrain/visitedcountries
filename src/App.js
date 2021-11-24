@@ -15,9 +15,10 @@ import TopVegasResturants from './TopVegasResturants';
 import TicketMarketplace from './TicketMarketplace';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import NewYorkCityArticle from './NewYorkCityArticle';
-import NewYorkCityArticle2 from './NewYorkCityArticle2';
-import NewYorkCityArticle3 from './NewYorkCityArticle3';
+import NewYorkCityArticle from './NYCArticles/NewYorkCityArticle';
+import NewYorkCityArticle2 from './NYCArticles/NewYorkCityArticle2';
+import NewYorkCityArticle3 from './NYCArticles/NewYorkCityArticle3';
+import NewYorkCityArticle4 from './NYCArticles/NewYorkCityArticle4';
 import Article from './Article'
 
 class App extends React.Component {
@@ -84,6 +85,7 @@ class App extends React.Component {
             <Route exact path="/NYCarticle" component={NewYorkCityArticle} />
             <Route exact path="/NYCarticle2" component={NewYorkCityArticle2} />
             <Route exact path="/NYCarticle3" component={NewYorkCityArticle3} />
+            <Route exact path="/NYCarticle4" component={NewYorkCityArticle4} />
           </Switch>          
       </Router>      
     </div>)
