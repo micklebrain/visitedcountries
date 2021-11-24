@@ -6,8 +6,7 @@ function TicketMarketplace() {
                 <p style = { {textAlign: "center"} }> Venmo nathan-nguyen-11 with comment of ticket name and quantity </p>
                 <ul>
                     <li>                    
-                        2x San Holo - Nov 20
-                        Price: $100 each
+                        None available
                     </li>
                 </ul>          
             </div>
