@@ -123,9 +123,6 @@ class NewYorkCityArticle4 extends React.Component {
                 <li> https://www.esbnyc.com/ </li>
             </ul>*/}
 
-            <h2> Uber eats promo code: eats-sxnvv </h2>
-            <h2> Grubhub invite link: https://www.grubhub.com/referral/3c840580-6470-11e8-b9ea-43abd66f1334?utm_source=grubhub.com&utm_medium=content_owned&utm_campaign=growth_refer-a-friend_share-link&utm_content=promo_</h2>
-
             <h1> September, 2021 top resturant in each New York borough </h1>
 
             {resturantsList}
