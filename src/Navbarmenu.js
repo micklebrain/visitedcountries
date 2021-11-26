@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 
 const Navbarmenu = () => {
 
@@ -38,18 +39,18 @@ const Navbarmenu = () => {
                         <nav className="main-nav " >
                             {/* Responsive Menu Button */}
                             {isResponsiveclose === true ? <>
-                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > </span>
+                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiXCircle /> </span>
                             </> : <>
-                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > </span>
+                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiAlignRight /> </span>
                             </>}
                             <ul className={boxClass.join(' ')}>
-                            <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> ABGs </NavLink> </li>
+                                <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> ABGs </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Boba Shops </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Car meets </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Falsies </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Festivals </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Tattoos </NavLink> </li>
-                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Cities </Link>
+                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Cities <FiChevronDown /> </Link>
                                     <ul className={boxClassSubMenu.join(' ')} >
                                         <li> <NavLink onClick={toggleClass} activeClassName='is-active' to={`/denver`}> Denver </NavLink> </li>
                                         <li> <NavLink onClick={toggleClass} activeClassName='is-active' to={`/lasvegas`}> Las Vegas </NavLink> </li>
