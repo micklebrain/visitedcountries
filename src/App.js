@@ -8,18 +8,15 @@ import {
   Link,
 } from "react-router-dom";
 
+import Navbarmenu from './Navbarmenu';
+
+
 class App extends React.Component {
   render() {   
     return (
     <div>
       <Router>
-          <nav id='navbar'>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>                  
-            </ul>
-          </nav>
+          <Navbarmenu/>
           <Switch>
             <Route exact path="/">
               <Home />
