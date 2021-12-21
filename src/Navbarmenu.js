@@ -47,8 +47,6 @@ const Navbarmenu = () => {
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> ABGs </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Boba Shops </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Car meets </NavLink> </li>
-                                <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Falsies </NavLink> </li>
-                                <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Festivals </NavLink> </li>
                                 <li className="menu-item" > <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Tattoos </NavLink> </li>
                                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Cities <FiChevronDown /> </Link>
                                     <ul className={boxClassSubMenu.join(' ')} >
