@@ -15,10 +15,8 @@ class App extends React.Component {
     return (
     <div>
       <Router>
-          <Navbarmenu/>
           <Switch>
-            <Route exact path="/">
-              <Home />
+            <Route exact path="/">              
             </Route>
           </Switch>          
       </Router>      
